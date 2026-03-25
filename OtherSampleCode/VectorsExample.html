@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/MotionPathPlugin.min.js"></script>
+
+<div id="controls">
+    <button id="up" type="button" style="position: absolute; left: 10%; top: 81%;">^</button>
+    <button id="down" type="button" style="position: absolute; left: 10%; top: 89%;">v</button>
+    <button id="left" type="button" style="position: absolute; left: 8.25%; top: 85%;">(</button>
+    <button id="right" type="button" style="position: absolute; left: 12%; top: 85%;">)</button>
+    <button id="clockwise" type="button" style="position: absolute; left: 9.9%; top: 85%;">C</button>
+</div>
+
+<svg id="box" width="100" height="200">
+    <polygon points="0,200 100,200 50,0" fill="red" /></svg>
+<script>
+    var elem = document.getElementById('box');
+    elem.style.position = "absolute";
+
+    var controlElements = {
+        up: document.getElementById('up'),
+        down: document.getElementById('down'),
+        left: document.getElementById('left'),
+        right: document.getElementById('right'),
+        cw: document.getElementById('clockwise')};
+
+    let currentRotation = 0;
+
+    var controlActions = {
+        up: function() {
+            var pos = elem.getBoundingClientRect();
+            elem.style.top = pos.top - 20 + 'px';},
+        down: function() {
+            var pos = elem.getBoundingClientRect();
+            elem.style.top = pos.top + 20 + 'px';},
+        left: function() {
+            var pos = elem.getBoundingClientRect();
+            elem.style.left = pos.left - 20 + 'px';},
+        right: function() {
+            var pos = elem.getBoundingClientRect();
+            elem.style.left = pos.left + 20 + 'px';},
+        cw: function cw() {
+        const rotationAmount = 5;
+        currentRotation += rotationAmount;
+
+        var elem = document.getElementById("box");
+        elem.style.transform = "rotate(" + currentRotation + "deg)"}};
+
+    var intervalId = null;
+
+    Object.keys(controlElements).forEach(function(direction) {
+        controlElements[direction].addEventListener('mousedown', function() {
+            if (intervalId) { // Stop previously running interval
+                clearInterval(intervalId);}
+            intervalId = setInterval(controlActions[direction], 100);});
+
+        controlElements[direction].addEventListener('mouseup', function() {
+            if (intervalId) { // Stop movement when button is released
+                clearInterval(intervalId);
+                intervalId = null;}});});
+</script>
+
+</html>
