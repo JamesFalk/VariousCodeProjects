@@ -1,0 +1,16 @@
+
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+.cnt-up {width: 100%; margin: 0 auto; border: 2px solid black;font-size: xx-large; text-align: center}
+
+.burgermenubtn {width: 100%; position: fixed; top:0; left:0;
+    background-color: black; color: lightgray; text-align: center; font-size: xx-large;}
+
+.menuframe {position:fixed; top:45px; left:35%; border: none; width:30%; height:0;}
+
+.cnt-md {display: block; margin-left: auto; margin-right: auto; width: 100%;}
+
+.btn-full {font-size: xx-large; width: 100%;}
+
+.cnt-dn {width: 100%; margin: 0 auto; border: 2px solid black;  font-size: large; text-align: center;}
