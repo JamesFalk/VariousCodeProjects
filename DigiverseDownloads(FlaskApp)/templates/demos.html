@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>demos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+{% block header %}
+    <script src="{{url_for('static', filename='Functions.js')}}"></script>
+    <button id='menubtn' onclick='toggleMenu()' class="burgermenubtn"><u>===M E N U===</u></button>
+    <iframe src="{{ url_for ('navmenu') }}" id="my-iframe" class="menuframe">
+    </iframe>
+    <br><br><br>
+<style> body {background-color: lightblue}</style>
+{% endblock %}
+
+{% block content %}
+<div class="cnt-up">
+    Program Demos:
+    <br>
+    <a href="{{ url_for('gridex') }}">Grid Layout Slideshow</a>
+    <br>
+     <a href="{{ url_for('slideshow') }}">Random Slideshow</a>
+</div>
+{% endblock %}
+
+{% block footer %}{% include 'barbot.html' %}{% endblock %}
+</body>
+</html>

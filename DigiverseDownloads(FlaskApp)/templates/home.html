@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+{% block header %}
+    <script src="{{url_for('static', filename='Functions.js')}}"></script>
+    <button id='menubtn' onclick='toggleMenu()' class="burgermenubtn"><u>===M E N U===</u></button>
+    <iframe src="{{ url_for ('navmenu') }}" id="my-iframe" class="menuframe">
+    </iframe>
+    <br><br><br>
+{% endblock %}
+
+{% block content %}
+    <script src="{{url_for('static', filename='Functions.js')}}"></script>
+    <img src="{{ url_for('static', filename='AwesomeMagicCard.jpg')}}" class="cnt-md">
+
+<audio id="AMW" src="{{ url_for('static', filename="AwsMgcWelcome.wav")}}"></audio>
+<audio id="DDSP" src="{{ url_for('static', filename="DDSecurityPolicy.wav")}}"></audio>
+<br><br>
+
+<button onclick="playAudioA()" class="btn-full" style="background-color: turquoise">WELCOME TO DIGIVERSE DOWNLOADS</button>
+
+<br><br><br>
+
+<a href="https://digiversedownloads.com/digitalstore/contact-me/">
+    <button class="btn-full" style="background-color: lightgreen">WebApp Assistance Contact Form</button></a>
+
+<br><br><br>
+
+<button onclick="playAudioB()" class="btn-full" style="background-color: orange">- SECURITY POLICY -</button>
+
+{% endblock %}
+
+{% block footer %}{% include 'barbot.html' %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>store</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+{% block header %}
+    <script src="{{url_for('static', filename='Functions.js')}}"></script>
+    <button id='menubtn' onclick='toggleMenu()' class="burgermenubtn"><u>===M E N U===</u></button>
+    <iframe src="{{ url_for ('navmenu') }}" id="my-iframe" class="menuframe">
+    </iframe>
+    <br><br><br>{% endblock %}
+
+{% block content %}
+<br />
+<div class="container;" style="width: 100%; margin: 0 auto; border: 2px solid black;font-size: x-large;text-align: center">
+<div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="" class="BLOG_video_class" height="266" src="https://www.youtube.com/embed/H7dbeazURxw" width="320" youtube-src-id="H7dbeazURxw"></iframe></div>
+<a href="https://digiversedownloads.com/digitalstore/downloads/webappstore/">$5 - Bad Referee App</a>
+<br /><br />
+
+<div class="separator" style="clear: both; text-align: center;"><iframe allowfullscreen="" class="BLOG_video_class" height="266" src="https://www.youtube.com/embed/fftVZNoGw-I" width="320" youtube-src-id="fftVZNoGw-I"></iframe></div>
+
+<a href="https://digiversedownloads.com/digitalstore/downloads/webappstore/">$10 - Market Splitter App</a>
+</div>
+{% endblock %}
+
+{% block footer %}{% include 'barbot.html' %}{% endblock %}
+</body>
+</html>

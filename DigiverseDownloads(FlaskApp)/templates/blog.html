@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>blog</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+{% block header %}
+    <script src="{{url_for('static', filename='Functions.js')}}"></script>
+    <button id='menubtn' onclick='toggleMenu()' class="burgermenubtn"><u>===M E N U===</u></button>
+    <iframe src="{{ url_for ('navmenu') }}" id="my-iframe" class="menuframe">
+    </iframe>
+    <br><br><br>
+    <style> body {background-color: lightgreen}</style>
+{% endblock %}
+
+{% block content %}
+<div class="container;" style="width: 85%; margin: 0 auto; border: 2px solid black;">
+    <div style="text-align: center; font-size:1.5em;">The Rational Theorist - Blog Appendix</div>
+    <br />
+    <b>APPS, PROGRAMS, PROJECTS:</b>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2023/06/10-button-keypad.html">3D Controller And 10 Button Keypad</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2022/11/the-falkenchord.html">Falkenchord</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2020/03/custom-gifs.html">Foil Glider</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2024/03/knobitar-project.html">Knobitar</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2022/07/led-arrays.html">LED Arrays</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2022/08/probability-programs.html">Probability Programs</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2022/08/market-splitter.html">Market Splitter App</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2024/03/upwork-web-development-projects.html">UpWork Web Development Tutorial</a>
+    <br /><br />
+    <a href="https://youtube.com/playlist?list=PLopKPSk_BB1R5ytC-f12YTieLdIfoB0cC">JCF - Apps, Programs, Projects Playlist</a>
+    <br /><br /><br />
+    <b>SCIENCE/TECHNOLOGY POSTS:</b>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/06/airplane-axis-of-rotation.html">Airplane Rotations</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/10/video-eva-footage-from-apollo-moon.html">Apollo Moon Footage</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/12/buoyancy-and-atmospheric-gasses.html">Atmospheric Gas And Bouyancy</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/02/wide-range-of-carbon-forms.html">Carbon Forms</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2010/01/vdc-circuit-resonance.html">Circuit Resonance</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/06/doppler-shifts-and-bowshock-waves.html">Doppler Waves</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2011/11/timeline-of-mercury-gemini-and-apollo.html">Early NASA Timeline</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/07/thermodynamics-and-engines.html">Engine Thermodynamics</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/06/piano-notes-and-exponential-frequencies.html">Exponential Frequencies</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/09/tribute-to-flying-cars.html">Flying Cars</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/12/fusion-is-good.html">Fusion Energy</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/02/gravitation-and-electromagnetism.html">Gravitation and Electromagnetism</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/12/collisions-and-gravitational.html">Gravitational Collisions</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/06/hydraulic-press.html">Hydraulic Press</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2010/08/dry-ice-bomb-crators-on-mars.html">Martian Dry Ice Crators</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2024/03/philosophy-and-mindstorms.html">Mindstorms And Philosophy</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2010/09/photos-from-model-train-convention-swap.html">Model Trains</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/07/nuclear-energy-for-educational-purposes.html">Nuclear Energy</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/03/source-1-feynmans-lectures-on-physics.html">Optic Refraction</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/06/orbits.html">Orbits</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/10/4-bit-q-byte.html">Q-Byte</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/06/radio-waves.html">Radio Waves</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/06/simple-harmonic-motion.html">Simple Harmonic Motion</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2010/09/political-business-technology-point-of.html">Statistical Change Theory</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/02/space-and-time-with-feynman-and-penrose.html">Space-Time</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2010/01/relativity-explained.html">Special Relativity</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2022/07/staying-cool.html">Staying Cool</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/10/morality-scale.html">The Morality Scale</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/04/flow-fields-vorticity-and-turbulence.html">Turbulent Flow Fields</a>
+    <br /><br />
+    <b>MATH POSTS:</b>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2010/03/dice-probabilities.html">Dice Probabilities</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2011/02/dot-pyramid-sequence-and-sum-of.html">Dot Configuration Pyramid Spiral</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/06/ellipses-circles-cycloids-pi-and-unity.html">Ellipses and Unity</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/11/fourier-analysis-and-odes.html">Fourier Analysis and ODEs</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2010/01/fractal-dimensionality.html">Fractal Dimensions</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/06/origami-of-j-solids.html">Johnson Solids</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2008/07/math-operations-tables.html">Math Tables</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2011/03/design-fun-with-polar-coordinates.html">Polar and Parametric Curves</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/01/z-spirals-in-imaginary-plane.html">Spiral Fractals</a>
+    <br /><br />
+    <b>AI, ART, AND GAME POSTS:</b>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2023/09/airline-lingo.html">Airline Lingo</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2023/08/being-more-useful_4.html">Being More Useful</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2023/02/machine-game.html">Machinery Game Runs</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2022/07/hyperfunk-tron.html">Hypertron</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2023/07/persuasion.html">Persuasion</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2010/07/pochess.html">PoChess</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2023/07/spacextc.html">SpaceXTC</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2009/08/quantums-texas-hold-em-jargon.html">Texas Hold-Em Lingo</a>
+    <br />
+    <a href="https://rationaltheorist.blogspot.com/2024/03/various-ai-concepts.html">Various Ai Concepts</a>
+    <br />
+<a href="https://rationaltheorist.blogspot.com/2024/03/videogame-ideas.html">Videogame Ideas</a>
+</div>
+{% endblock %}
+
+{% block footer %}{% include 'barbot.html' %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+<<!DOCTYPE html><html lang="en">
+
+<head>
+    <title>AppStore</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <style> body {background-color: sandybrown}</style>
+
+    <script src="{{url_for('static', filename='Functions.js')}}"></script>
+    <button id='menubtn' onclick='toggleMenu()' class="burgermenubtn"><u>===M E N U===</u></button>
+    <iframe src="{{url_for ('navmenu') }}" id="my-iframe" class="menuframe">
+    </iframe>
+    <br><br><br>
+
+    <style>
+    .flex-container {display: flex; flex-direction: row; justify-content: space-between; flex-wrap: wrap; }
+    .flex-item {width: 48%; margin: 1%; text-align: center; box-sizing: border-box;}</style>
+
+<div class="container cnt-up">Digital App Store</div><br>
+<div class="flex-container">
+    <div class="flex-item">
+          <iframe allowfullscreen="" src="https://www.youtube.com/embed/H7dbeazURxw" height="270"></iframe><br>
+    <a href="https://digiversedownloads.com/digitalstore/downloads/badrefereeapp/">
+            $5 - Bad Referee App</a></div>
+
+    <div class="flex-item">
+          <iframe allowfullscreen="" src="https://www.youtube.com/embed/fftVZNoGw-I" height="270"></iframe><br>
+                <a href="https://digiversedownloads.com/digitalstore/downloads/market-splitter-app/">
+            $10 - Market Splitter App</a></div>
+
+</div>
+
+</body>
+
+</html>
